@@ -1,0 +1,95 @@
+#sul terminal pip3 install pygame
+#oppure pip install pygame
+#altrimenti installare su anaconda prompt 
+
+import pygame
+import random
+import sys
+from sys import exit
+from pygame import mixer
+
+pygame.init()
+
+#pygame.mixer.music.load('/Users/air/Desktop/PHD/Python/Python_Lessons_FM/Python_Lessons_import/Through_Fire_Flames.mp3')
+#pygame.mixer.music.play(-1)
+
+WIDTH = 1000
+HEIGHT = 600
+
+RED = (255, 0, 0)
+BLUE = (0, 0, 250)
+BACKGROUND_COLOR = (0,0,0)
+
+player_size = 50
+player_pos = [WIDTH/2, HEIGHT-2*player_size]
+
+enemy_size = 50
+enemy_pos = [random.randint(0, WIDTH-enemy_size), 0]
+
+SPEED = 10
+
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+game_over = False
+
+clock = pygame.time.Clock()
+
+def detect_collision(player_pos, enemy_pos):
+    p_x = player_pos[0]
+    p_y = player_pos[1]
+    
+    e_x = enemy_pos[0]
+    e_y = enemy_pos[1]
+    
+    if (e_x >= p_x and e_x < (p_x + player_size)) or (p_x >= e_x and p_x < (e_x+enemy_size)):
+        if (e_y >= p_y and e_y < (p_y + player_size)) or (p_y >= e_y and p_y < (e_y+enemy_size)):
+            return True
+        return False 
+    
+    
+while not game_over:
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            #sys.exit()
+            pygame.quit()
+            exit()
+        
+        if event.type == pygame.KEYDOWN:
+            x = player_pos[0]
+            y = player_pos[1]
+            
+            if event.key == pygame.K_LEFT:
+                x -= player_size
+            elif event.key == pygame.K_RIGHT:
+                x += player_size
+            #if event.key == pygame.K_r and not player.alive():
+                #main()
+                
+            player_pos = [x,y]
+            
+    screen.fill(BACKGROUND_COLOR)
+    
+    #updating enemy positions
+    if enemy_pos[1] >= 0 and enemy_pos[1] < HEIGHT:
+        enemy_pos[1] += SPEED
+    else:
+        enemy_pos[0] = random.randint(0, WIDTH-enemy_size)
+        enemy_pos[1] = 0
+        
+    if detect_collision(player_pos, enemy_pos):
+        game_over = True 
+        print('GAME OVER')
+        break
+    
+    #sto provando a ricreare un pop-up con (GAME OVER) quando avviene la collisione.
+    #vorrei inserire anche un key per restartare il gioco (tipo premi R per restart)
+    #if game_over == True:
+        #detect_collision(player_pos, enemy_pos).draw_text('GAME OVER', 22, WHITE, WIDTH / 2, HEIGHT * 7 / 8)
+        
+    pygame.draw.rect(screen, BLUE, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
+    pygame.draw.rect(screen, RED, (player_pos[0], player_pos[1], player_size, player_size))
+    
+    clock.tick(30)
+    
+    pygame.display.update()
