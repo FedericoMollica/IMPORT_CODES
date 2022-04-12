@@ -1,0 +1,67 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+%config InlineBackend.figure_format = 'svg'
+plt.rcParams.update({'font.size': 10, 'font.style': 'normal', 'font.family':'serif'})
+from google.colab import files
+import datetime as dt
+
+df = pd.read_excel('/content/drive/MyDrive/Python_Files/Python_Import/Python_CTs_FM.xlsx', header = [0])
+#comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
+#mettere read_xslx per aprire excel
+#aggiungere sheet_name = 'nome del foglio', per aprire uno specifico foglio del documento.
+
+df = pd.read_excel('/content/drive/MyDrive/Python_Files/Python_Import/Python_CTs_FM.xlsx', header = [0])
+#comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
+#mettere read_xslx per aprire excel
+#aggiungere sheet_name = 'nome del foglio', per aprire uno specifico foglio del documento.
+
+df2.to_excel('/content/drive/MyDrive/Python_Files/Python_Export/20220318_LA_ASPECT_CT_list.xlsx')
+#comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
+#mettereto_excel per salvare in excel
+
+df.drop([0, 1])
+#comando per eliminare righe usando un indice
+
+df1 = df1.rename(columns = {'Hix number\n':'ciao'})
+#comando per rinominare una specifica colonna su pandas
+
+df1 = df1.sort_values('BIRTH DATE')
+#comando per sortare tutto il dataframe! rispetto ad una colonna
+
+plt.figure(figsize = (20,15))
+plt.scatter(list(range(len(df4['BIRTH DATE']))),df4["CT +2 date"], c = 'purple', s = 70, alpha = 0.6, label = 'CT+2 date')
+plt.scatter(list(range(len(df4['BIRTH DATE']))),df4["CT +1 date"], c = 'black', s = 70, alpha = 0.6, label = 'CT+1 date')
+plt.scatter(list(range(len(df4['BIRTH DATE']))),df4["1ST POSTITIVE ASP"], c = 'RED', s = 100, alpha = 0.6, label = '1ST POSITIVE ASP')
+plt.scatter(list(range(len(df4['BIRTH DATE']))),df4["CT -1 date"], c = 'green', s = 70, alpha = 0.6, label = 'CT-1 date')
+plt.scatter(list(range(len(df4['BIRTH DATE']))),df4["CT -2 date"], c = 'DarkBlue', s = 70, alpha = 0.6, label = 'CT-2 date')
+plt.scatter(list(range(len(df4['BIRTH DATE']))),df4["BIRTH DATE"], c = 'brown', s = 70, alpha = 0.6, label = 'Birth date')
+plt.title('ASPECT PATIENTS', size = 20)
+plt.legend()
+plt.xlabel('Patient', size = 20)
+plt.ylabel('Year', size = 20)
+#plt.savefig('/content/drive/MyDrive/Python_Files/Python_Export/Grafico_mesi.png', dpi = 200)
+#con questo comando posso plottare in scatter (punti, altrimenti in linea). E' importante definire il range e settare i parametri del plot
+
+df1['nb_months CT-2'] = round((df1["CT -2 date"] - df1["BIRTH DATE"])/np.timedelta64(1, 'M'),0)
+#comando per calcolare la differenza di età tra due colonne espressa in mesi ed arrotondata a due decimali. Per arrotondare inserisco il
+#comando round seguito alla fine dalla virgola e dal numero di decimali che voglio ottenere.
+
+df4['CT -1 date'] =  pd.to_datetime(df4['CT -1 date'])
+#formula per convertire le date in formato stringa in formato data.
+
+df1['CT -2 date'] =  pd.to_datetime(df1['CT -2 date'], format='%d/%m/%Y')
+#formula per convertire le date in formato stringa in formato data.
+
+df1["CT DATE"] = pd.to_datetime(df1["CT DATE"]).dt.strftime('%Y')
+#comando per cambiare o impostare un diverso formato data tempo ('%Y-%m-%d'). Non compatibile con str, necessaria conversione.
+
+df2 = df1[df1['CT -1 date']!='99/99/9999']
+#comando per eliminare una stringa dalla tabella in riferimento ad una dterminata colonna
+
+df1 = df1.drop(['CT-2 ID','CT -2 date'], 1)
+#comando per eliminare una o piu colonne da una tabella df
+
+df2 = pd.merge(df, df1, on = 'ciao')
+#comando per fare merge di un df su un altro ottenendo solo le linee in comune
