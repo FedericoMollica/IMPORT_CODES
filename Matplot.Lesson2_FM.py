@@ -60,7 +60,7 @@ plt.scatter(list(range(len(df1['BIRTH DATE']))),df1["CT -1 date"], c = 'green', 
 #plt.scatter(list(range(len(df1['BIRTH DATE']))),df1["CT -2 date"], c = 'DarkBlue', s = 70, alpha = 0.6, label = 'CT-2 date')
 plt.scatter(list(range(len(df1['BIRTH DATE']))),df1["BIRTH DATE"], c = 'brown', s = 70, alpha = 0.8, label = 'Birth date')
 plt.title('ASPECT PATIENTS', size = 20)
-plt.legend()
+plt.legend() 
 plt.xlabel('Patient', size = 20)
 plt.ylabel('Year', size = 20)
 plt.savefig('/content/drive/MyDrive/Python_Files/Python_Export/20220331_ASPECT_FULL_pos_cohort_graph.png', dpi = 200)
