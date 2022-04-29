@@ -1,23 +1,13 @@
-#!/usr/bin/env python
+"""
+
+#XXXXX  LEZIONE NUMERO 2 SUI GRAFICI: LINEA, ISTOGRAMMI, TORTA, BOX E SCATTER PLOT  XXXXX
+
+@author: Federico Mòllica
+
+"""
+
 # coding: utf-8
 
-# In[146]:
-
-
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-
-
-# In[ ]:
-
-
-"""
-Created on Wed Apr 13 01:19:20 2022
-@author: Federico
-LEZIONE NUMERO 2 SUI GRAFICI 
-GRAFICI A LINEA E SCATTER PLOT
-"""
 
 ''' XXXXX COMPLEX LINE GRAPH XXXXX'''
 
@@ -57,7 +47,11 @@ plt.legend()
 
 plt.show()
 
-'''XXXXX COMPLEX SCATTER PLOT XXXXX ''''
+
+'''
+#XXXXX COMPLEX SCATTER PLOT XXXXX 
+''''
+
 
 plt.figure(figsize = (20,15))
 plt.scatter(list(range(len(df1['BIRTH DATE']))),df1["CT +2 date"], c = 'purple', s = 70, alpha = 0.6, label = 'CT+2 date')
@@ -76,21 +70,16 @@ plt.savefig('/content/drive/MyDrive/Python_Files/Python_Export/20220331_ASPECT_F
 #con questo comando posso plottare in scatter (punti, altrimenti in linea). E' importante definire il range e settare i parametri del plot
 
 
-# In[193]:
+'''
+#XXXX  ISTOGRAMMA  XXXX
 
+#XXX USE THE COLOR PICKER ONLINE TO TAKE THE CODE OF THE COLORS XXX
+'''
 
-#XXX LOAD FIFA DATA XXXX
+#LOAD FIFA DATA 
 
 fifa = pd.read_csv('/Users/air/Desktop/PHD/Python/Python_Lessons_FM/Python_import/fifa_data.csv')
 fifa.head(5)
-
-
-# In[194]:
-
-
-#XXX Histograms XXX
-
-#XXX USE THE COLOR PICKER ONLINE TO TAKE THE CODE OF THE COLORS XXX
 
 plt.figure(dpi = 120)
 
@@ -104,9 +93,6 @@ plt.title('Distribution of Player Skills in FIFA 2018')
 plt.savefig('/Users/air/Desktop/PHD/Python/Python_Lessons_FM/Python_export/Distribution_Player_Skills_FIFA.jpg', dpi = 70)
 
 plt.show()
-
-
-# In[195]:
 
 
 plt.figure(dpi = 120)
@@ -132,16 +118,10 @@ plt.savefig('/Users/air/Desktop/PHD/Python/Python_Lessons_FM/Python_export/Foot_
 plt.show()
 
 
-# In[196]:
-
-
 fifa["Weight"].head(3)
 #0    159lbs
 #1    183lbs
 #2    150lbs
-
-
-# In[197]:
 
 
 fifa["Weight"] = [int(x.strip("lbs")) if type(x) == str else x for x in fifa["Weight"]]
@@ -174,10 +154,10 @@ plt.savefig('/Users/air/Desktop/PHD/Python/Python_Lessons_FM/Python_export/Weigh
 plt.show()
 
 
-# In[198]:
-
-
+'''
 #XXXX  BOX PLOT  XXXX
+'''
+
 
 plt.figure(dpi= 120)
 
