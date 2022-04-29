@@ -1,8 +1,13 @@
-# -*- coding: utf-8 -*-
 """
-NOTEBOOK CONTENENTE I PRINCIPALI CODICI PER LAVORARE SUI DATAFRAME
+
+XXXXXXXX    NOTEBOOK CONTENENTE I PRINCIPALI CODICI PER LAVORARE SU DATASET   XXXXXXXX
+
+author: Federico Mòllica
 
 """
+
+# -*- coding: utf-8 -*-
+
 
 '''
 #XXXXXX     CODICI PER IMPORTARE LE LIBRERIE PRINCIPALI DI PYTHON      XXXXXXXXX
@@ -33,6 +38,24 @@ df = pd.read_excel('/content/drive/MyDrive/Python_Files/Python_Import/Python_CTs
 df2.to_excel('/content/drive/MyDrive/Python_Files/Python_Export/20220318_LA_ASPECT_CT_list.xlsx')
 #comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
 #mettereto_excel per salvare in excel
+
+
+'''
+#XXXXXX    LISTE   XXXXX
+
+'''
+
+a = [0, 1 ,2]
+b = [0 , 1, 'hello']
+#codice base per creare una lista. Posso inserire sia numeri che stringhe
+
+a.append(1)
+a.append('bye')
+#codice per aggiungere un elemento alla mia lista
+
+b.pop('hello')
+#codice per eliminare un elemento dalla mia lista
+
 
 '''
 #XXXXXX    CODICI PER MODIFICARE IL DATAFRAME     XXXXXXXXX
@@ -207,4 +230,3 @@ df.groupby(['Type 1']).count()
 df.groupby(['Type 1', 'Type 2']).count()
 #comando per raggruppare elementi di colonne diverse e contarne quante volte si ripetono nel df.
 #in questo caso ottengo la conta di tutti i pokemon divisi per tipo 1 e tipo 2.
-
