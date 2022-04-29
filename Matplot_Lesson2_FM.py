@@ -8,8 +8,9 @@
 
 # coding: utf-8
 
-
-''' XXXXX COMPLEX LINE GRAPH XXXXX'''
+'''
+#XXXXX  GRAFICO A LINEA  XXXXX
+'''
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -185,4 +186,3 @@ plt.ylabel("FIFA Overall Rating")
 plt.savefig('/Users/air/Desktop/PHD/Python/Python_Lessons_FM/Python_export/Professional_Soccer_Team.jpg', dpi = 70)
 
 plt.show()
-
