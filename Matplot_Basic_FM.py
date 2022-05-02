@@ -2,6 +2,8 @@
 
 XXXX IMPRARARE A PLOTTARE CON PYTHON XXXX
 
+
+@author: Federico Mòllica
 '''
 
 # -*- coding: utf-8 -*-
