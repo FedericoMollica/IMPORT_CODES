@@ -16,9 +16,16 @@ author: Federico Mòllica
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import datetime as dt
+import string
 # %matplotlib inline
 # %config InlineBackend.figure_format = 'svg'
 plt.rcParams.update({'font.size': 10, 'font.style': 'normal', 'font.family':'serif'})
+
+'''
+#XXX GOOGLE COLAB XXX
+'''
+
 from google.colab import files
 import datetime as dt
 
@@ -48,6 +55,16 @@ df2.to_excel('/content/drive/MyDrive/Python_Files/Python_Export/20220318_LA_ASPE
 a = [0, 1 ,2]
 b = [0 , 1, 'hello']
 #codice base per creare una lista. Posso inserire sia numeri che stringhe
+
+alphabet_string = string.ascii_lowercase
+letters = list(alphabet_string) 
+#codice per ottenere tutte le lettere dell'alfabeto
+#import string fondamentale.
+print(letters)
+#result:
+#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'
+#'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 
+#'s', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 a.append(1)
 a.append('bye')
@@ -179,6 +196,10 @@ df.describe()
 '''
 #XXXXX READ A SPECIFIC LOCATION (R,C) XXXXX
 '''
+
+range(len(s)-3)
+#codice 'range(len(lista x))' mi consente di selezionare un elemento in posizione 0 ed altri indici 
+#della mia specifica lista (0, 1 al contrario -1, -2, ecc)
 
 df.iloc[2,1]
 print(df.iloc[2,1])
