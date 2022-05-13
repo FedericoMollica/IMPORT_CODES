@@ -70,8 +70,12 @@ a.append(1)
 a.append('bye')
 #codice per aggiungere un elemento alla mia lista
 
-b.pop('hello')
+a = [13, 12, 'hello']
+a.remove('hello')
 #codice per eliminare un elemento dalla mia lista
+
+a.pop(2)
+#codice per eliminare un elemento dalla mia lista corrispondente all'indice
 
 
 '''
