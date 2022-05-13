@@ -242,7 +242,7 @@ df.loc[df['Name'].str.contains('saur'), ['Name']] = 'Test 3'
 #codice per rinominare gli elementi delle specifiche colonne che contengono elementi della str selezionati.
 
 '''
-#XXXXXX AGGREGATE STATISTICS (GROUPBY) XXXXX
+#XXXXXX AGGREGATE STATISTICS (GROUPBY) XXXXXX
 '''
 
 df.groupby(['Type 1']).mean().sort_values('Defense', ascending = False)
@@ -255,3 +255,79 @@ df.groupby(['Type 1']).count()
 df.groupby(['Type 1', 'Type 2']).count()
 #comando per raggruppare elementi di colonne diverse e contarne quante volte si ripetono nel df.
 #in questo caso ottengo la conta di tutti i pokemon divisi per tipo 1 e tipo 2.
+
+'''
+#XXXXXX LOOP E LOGICA FONDAMENTALI XXXXXX
+'''
+
+
+'''
+#XXX COUNTING LOOP XXX
+'''
+
+#Codice loop base per contare gli eventi o elementi.
+a = ['a','a','b', 'c','a','a']
+
+def count(name, letter):
+  count = 0
+  for letter in name:
+     count += 1
+  return count 
+
+count(a, 'a')
+#result:
+#6
+
+count('mucca', 'a')
+#result:
+#5
+
+#codice per contare le ripetizioni di uno specifico elemento in lista
+a = ['a','a','b', 'c','a','a']
+
+def count(name, letter):
+  count = 0
+  for l in name:
+    if l == letter:
+     count += 1
+  return count 
+ 
+count(a, 'a')
+#result:
+#4
+
+count('mucca', 'a')
+#result:
+#1
+
+#codice per contare e printare gli elementi unici in una lista o stringa in due diversi output. 
+a = ['a','a','b', 'c','a','a']
+
+def count_different_letters(name):
+  unique_el_list = []
+  for l in name:
+    if l not in unique_el_list:
+     unique_el_list.append(l)
+  print(len(unique_el_list), unique_el_list)
+  return len(unique_el_list), unique_el_list
+ 
+numero, elementi = count_different_letters('ccane_%')
+#result:
+#6 ['c', 'a', 'n', 'e', '_', '%']
+
+numero
+#result:
+#6
+
+elementi
+#result:
+#['c', 'a', 'n', 'e', '_', '%']
+
+#codice veloce per contare e printare gli elementi unici di una lista o stringa.
+a = ['a','a','b', 'c','a','a']
+
+def count_different_letters(name):
+  return len(set(name)), list(set(name))
+#result:
+#(3, ['b', 'a', 'c'])
+
