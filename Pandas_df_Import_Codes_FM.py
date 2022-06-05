@@ -40,7 +40,8 @@ drive.mount('/content/drive')
 df = pd.read_excel('/content/drive/MyDrive/Python_Files/Python_Import/Python_CTs_FM.xlsx', header = [0])
 #comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
 #mettere read_xslx per aprire excel
-#aggiungere sheet_name = 'nome del foglio', per aprire uno specifico foglio del documento.
+#aggiungere, sheet_name = 'nome del foglio', per aprire uno specifico foglio del documento.
+#aggiungere, index_col = 'nome colonna' per impostare una specifica colonna come indice del df
 
 df2.to_excel('/content/drive/MyDrive/Python_Files/Python_Export/20220318_LA_ASPECT_CT_list.xlsx')
 #comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
