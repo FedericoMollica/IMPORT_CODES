@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[50]:
-
 
 #AUTHOR: FEDERICO MOLLICA 2022
 #SCRIPT: DICOM_TAG_ANALYSIS_FM_v1
@@ -33,16 +28,3 @@ df.to_excel('/Users/048252/Downloads/' + dt + '_DICOM_TAG_ANALYSIS_FM.xlsx')
 #df.to_excel('ADD FOLDER PATH' + dt + '_DICOM_TAG_ANALYSIS_FM.xlsx')
 #code to save the info as excel file:
 #date of today + '_DICOM_TAG_ANALYSIS_FM.xlsx'
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
