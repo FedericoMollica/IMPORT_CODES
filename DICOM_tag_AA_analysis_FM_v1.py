@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[14]:
-
 
 #AUTHOR: FEDERICO MOLLICA 2022
 #SCRIPT: DICOM_TAG_ANALYSIS_FM_v1
@@ -75,10 +70,4 @@ df1 = df1[['StudyInstanceUID',
 df1.to_excel(output_path + dt + '_AA_CTs_Req_List_FM.xlsx')
 #code to save an extra excel for the AA LungQ method analysis
 #date of today + '_AA_CTs_Req_List_FM.xlsx'
-
-
-# In[ ]:
-
-
-
 
