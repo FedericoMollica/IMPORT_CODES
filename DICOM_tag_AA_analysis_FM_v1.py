@@ -1,6 +1,6 @@
 
 #AUTHOR: FEDERICO MOLLICA 2022
-#SCRIPT: DICOM_TAG_ANALYSIS_FM_v1
+#SCRIPT: DICOM_tag_AA_analysis_FM_v1
 
 #DESCRIPTION: 
 #the first part of the code creates an excel file 
