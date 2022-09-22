@@ -8,6 +8,9 @@ pip install pydicom
 python -m pip install pydicom
 #codici per installare pydicom
 
+pip install dicom-csv
+#codice per installare dicom-csv
+
 import pydicom
 pydicom.__version__
 #codice per verificare la versione di pydicom
