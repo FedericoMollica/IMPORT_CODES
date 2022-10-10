@@ -47,6 +47,11 @@ df2.to_excel('/content/drive/MyDrive/Python_Files/Python_Export/20220318_LA_ASPE
 #comando per salvare il data frame in formato csv per excel. Il file viene salvato in automatico su google drive.
 #mettereto_excel per salvare in excel
 
+'''
+UNIRE PIU' EXCEL IN UN UNICO FOGLIO (excel):
+Cliccare su Data -> New query -> From File -> From Folder
+Add the directory path -> Combine -> Combine & Load
+'''
 
 '''
 #XXXXXX    LISTE   XXXXX
