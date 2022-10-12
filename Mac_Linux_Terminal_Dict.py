@@ -41,7 +41,7 @@ MAC LINUX TERMINAL DICTIONARY
 #codice per scrivere su un file txt dal terminale
 
 (base) MacBook-di-Federico:~ Federico$ touch test.txt
-(base) MacBook-di-Federico:Downloads Federico$ echo -e 'Ciao Amico' >> test.txt
+(base) MacBook-di-Federico:~ Federico$ echo -e 'Ciao Amico' >> test.txt
 (base) MacBook-di-Federico:~ Federico$ open test.txt
 #codici per creare, modificare ed aprire un file test dal terminale
 
