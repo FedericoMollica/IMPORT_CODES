@@ -87,7 +87,15 @@ a.pop(2)
 '''
 #XXXXXX    CODICI PER MODIFICARE IL DATAFRAME     XXXXXXXXX
 
-#XXX  RIGHE XXX
+
+#XXX RIEMPIRE LE CELLE VUOTE XXX
+'''
+
+df.fillna('', inplace=True)
+#codice per riempire automaticamente tutte le celle vuote del mio df
+
+'''
+#XXX RIGHE XXX
 '''
 
 df.iloc[4]
