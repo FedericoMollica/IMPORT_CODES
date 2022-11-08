@@ -94,6 +94,9 @@ a.pop(2)
 df.fillna('', inplace=True)
 #codice per riempire automaticamente tutte le celle vuote del mio df
 
+df.dropna(inplace=True)
+#codice per eliminare tutte le celle contenenti valori nulli
+
 '''
 #XXX RIGHE XXX
 '''
