@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 
 #AUTHOR: FEDERICO MOLLICA 2022
 #SCRIPT: DICOM_TAG_ANALYSIS_FM_v2
@@ -102,7 +97,9 @@ AA LungQ Method selection
 
 #only keep columns we need for the AA- LungQ analysis
 #we can add, remove or sort the columns just changing the order below
-df4 = df1[['StudyInstanceUID',
+df4 = df1[['PathToFolder',
+           'SeriesInstanceUID',
+           'SeriesNumber',
            'PatientID',
            'AcquisitionNumber',     
            'AcquisitionTime',
@@ -112,8 +109,6 @@ df4 = df1[['StudyInstanceUID',
            'ManufacturerModelName',
            'PatientPosition',
            'PatientSex',
-           'SeriesInstanceUID',
-           'SeriesNumber',
            'SliceThickness',
            'SliceThickness_mean',
            'XRayTubeCurrent_mean']]
@@ -121,11 +116,3 @@ df4 = df1[['StudyInstanceUID',
 df4.to_excel(output_path + dt + '_AA_CTs_Req_List_FM.xlsx')
 #code to save an extra excel for the AA LungQ method analysis
 #date of today + '_AA_CTs_Req_List_FM.xlsx'
- 
-
-
-# In[ ]:
-
-
-
-
