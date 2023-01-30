@@ -63,8 +63,12 @@ b = [0 , 1, 'hello']
 #codice base per creare una lista. Posso inserire sia numeri che stringhe
 
 emp_str_1 = 'John-Doe-70000'
-first, last, pay = first, last, pay = emp_str_1.split('-')
+#if we want to extract info from a string we can split it and add it into our class
+first, last, pay = emp_str_1.split('-')
 #codice per dividere le parole di una stringa usando uno specifico carattere
+print(first)
+#result: 
+#John
 
 alphabet_string = string.ascii_lowercase
 letters = list(alphabet_string) 
