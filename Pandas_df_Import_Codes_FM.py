@@ -62,6 +62,10 @@ a = [0, 1 ,2]
 b = [0 , 1, 'hello']
 #codice base per creare una lista. Posso inserire sia numeri che stringhe
 
+emp_str_1 = 'John-Doe-70000'
+first, last, pay = first, last, pay = emp_str_1.split('-')
+#codice per dividere le parole di una stringa usando uno specifico carattere
+
 alphabet_string = string.ascii_lowercase
 letters = list(alphabet_string) 
 #codice per ottenere tutte le lettere dell'alfabeto
