@@ -212,6 +212,9 @@ df1['nr_years CT -2'] = df1["1ST POSTITIVE ASP"] - df1["CT -2 date"]
 df2 = pd.merge(df, df1, on = 'ciao')
 #comando per fare merge di un df su un altro ottenendo solo le linee in comune
 
+df2 = (df1.merge(df, on= ['local id', 'Visit'], how='outer', indicator=True).query('_merge != "both"').drop(columns='_merge'))
+#opposto di merge per tenere solo gli elementi non in comune usando piu colonne di due diversi df
+
 df4 = df[~df['CT Date'].isin(df2['CT Date'])]
 #codice per eliminare tutti gli elementi di una specifica colonna di un df presenti in un altro df. Opposto di merge.
 
