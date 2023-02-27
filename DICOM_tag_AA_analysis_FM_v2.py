@@ -17,6 +17,8 @@ from dicom_csv import join_tree
 import pandas as pd
 import os
 import numpy as np
+from time import sleep
+from tqdm import tqdm
 
 #######################################################
 #1st step:
